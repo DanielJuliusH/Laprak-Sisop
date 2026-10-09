@@ -38,7 +38,7 @@ Langkah pertama dilakukan pada **Development-System VM**. VM dijalankan dan dila
 - **Username:** `xinu`
 - **Password:** `xinurocks`
 
-![Menu Login Development-System VM](assets/gambar1-login.png)
+![Menu Login Development-System VM](assets/Screenshot%20%28431%29.png)
 
 *Gambar 1: Tampilan menu login pada Development-System VM dengan user `xinu`.*
 
@@ -51,7 +51,7 @@ $ make
 **Hasil:**
 Proses `make` akan mengompilasi seluruh *source code* C menjadi *image* bernama `xinu.elf`. Sistem juga secara otomatis menyalin *image* tersebut ke direktori server TFTP (`/srv/tftp/xinu.boot`) agar siap diunduh oleh *Backend VM*.
 
-![Terminal Compile Xinu](assets/gambar2-compile.png)
+![Terminal Compile Xinu](assets/Screenshot%20%28439%29.png)
 
 *Gambar 2: Proses kompilasi source code Xinu menggunakan perintah `make` pada Development-System VM.*
 
@@ -62,7 +62,7 @@ Selanjutnya, **Backend VM** dijalankan. Karena Backend VM tidak memiliki hardisk
 3. Backend VM mengunduh file `xinu.boot` melalui protokol TFTP.
 4. Xinu OS berhasil dimuat ke memori dan berjalan.
 
-![Booting Backend VM](assets/gambar3-booting.png)
+![Booting Backend VM](assets/Screenshot%20%28440%29.png)
 
 *Gambar 3: Tampilan Backend VM saat melakukan booting melalui jaringan (PXE) dan memuat GRUB.*
 
@@ -76,7 +76,7 @@ $ sudo minicom
 **Hasil:**
 Terminal Development-System kini terhubung langsung ke *console* Xinu di Backend VM. Prompt terminal berubah dari `xinu@xinu-develop-end:$` menjadi **`xsh$`**, yang menandakan bahwa praktikan kini berada di dalam *Xinu Shell*.
 
-![Koneksi Minicom](assets/gambar4-minicom.png)
+![Koneksi Minicom](assets/Screenshot%20%28441%29.png)
 
 *Gambar 4: Koneksi berhasil melalui Minicom, ditandai dengan munculnya prompt `xsh$`.*
 
@@ -87,7 +87,7 @@ Pada prompt `xsh$`, praktikan dapat memberikan perintah langsung ke kernel Xinu.
 xsh$ help
 ```
 
-![Perintah Help Xinu](assets/gambar5-help.png)
+![Perintah Help Xinu](assets/Screenshot%20%28442%29.png)
 
 *Gambar 5: Output dari perintah `help` yang menampilkan daftar command bawaan Xinu OS.*
 
